@@ -2,7 +2,6 @@ require 'nokogiri'
 require 'open-uri'
 
 class PropertyController < ApplicationController
-
     def create
         # Add check for only xml file here
         doc = Nokogiri::XML(URI.open(params[:url]))
@@ -18,9 +17,6 @@ class PropertyController < ApplicationController
             )
         end
 
-        redirect_to property_index_path, notice: 'File Parsed'
-    end
-
-    def index
+        redirect_to rentable_path, notice: 'Success'
     end
 end
