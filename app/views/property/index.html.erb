@@ -1,0 +1,5 @@
+<%= form_with do |form| %>
+    <div>Please enter the URL for the file you would like to parse</div>
+    <%= form.text_field :url %>
+    <%= form.submit "Parse" %>
+<% end %>
