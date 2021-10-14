@@ -5,9 +5,9 @@
         <%= form.submit "Parse" %>
     <% end %>
 </div>
-<% if flash[:notice] === 'Success' %>
+<% if flash[:notice] %>
     <script>
-        toastr.success('File Parsed');
+        toastr.success('<%= flash[:notice] %>');
     </script>
 
     <div class='center'>
@@ -15,4 +15,10 @@
             <%= form.submit "Show Madison Properties" %>
         <% end %>
     </div>
+<% end %>
+
+<% if flash[:alert] %>
+    <script>
+        toastr.error('<%= flash[:alert] %>');
+    </script>
 <% end %>
