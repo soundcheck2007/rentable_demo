@@ -9,4 +9,10 @@
     <script>
         toastr.success('File Parsed');
     </script>
+
+    <div class='center'>
+        <%= form_with url: properties_index_path, method: :get do |form| %>
+            <%= form.submit "Show Madison Properties" %>
+        <% end %>
+    </div>
 <% end %>

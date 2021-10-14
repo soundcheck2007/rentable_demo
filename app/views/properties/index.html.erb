@@ -1,0 +1,14 @@
+<div class='table'>
+    <div class='table-row'>
+        <div class='table-cell'>Property ID</div>
+        <div class='table-cell'>Property Name</div>
+        <div class='table-cell'>Property Email</div>
+    </div>
+    <% @madison_properties.each do |property| %>
+        <div class='table-row'>
+            <div class='table-cell'><%= property.rentableId %></div>
+            <div class='table-cell'><%= property.name %></div>
+            <div class='table-cell'><%= property.email %></div>
+        </div>
+    <% end %>
+</div>
