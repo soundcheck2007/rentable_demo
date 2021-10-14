@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 2021_10_14_011402) do
 
   create_table "properties", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "rentableId"
     t.string "name"
     t.string "email"
-    t.string "rentableId"
     t.string "city"
-    t.integer "numberOfBedrooms"
+    t.string "state"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

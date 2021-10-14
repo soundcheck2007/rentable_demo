@@ -1,5 +1,12 @@
-<%= form_with do |form| %>
-    <div>Please enter the URL for the file you would like to parse</div>
-    <%= form.text_field :url %>
-    <%= form.submit "Parse" %>
+<div class='center'>
+    <%= form_with do |form| %>
+        <div>Please enter the URL for the file you would like to parse</div>
+        <%= form.text_field :url, size: 60 %>
+        <%= form.submit "Parse" %>
+    <% end %>
+</div>
+<% if flash[:notice] %>
+    <script>
+        toastr.success('<%= flash[:notice] %>');
+    </script>
 <% end %>
